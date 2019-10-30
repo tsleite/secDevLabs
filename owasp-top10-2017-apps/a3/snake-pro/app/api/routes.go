@@ -77,8 +77,7 @@ func Login(c echo.Context) error {
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, map[string]string{"result": "error", "details": "Error login."})
 	}
-	// input validation missing! do it later!
-
+	 <center><textarea class="input-login" value="{{text }}" name= "text" aria-describedby="sizing-addon1"  maxlength="2000" rows="10" placeholder="Text"></textarea></center>
 	userDataQuery := map[string]interface{}{"username": loginAttempt.Username}
 	userDataResult, err := db.GetUserData(userDataQuery)
 	if err != nil {
